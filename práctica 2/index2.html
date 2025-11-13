@@ -1,27 +1,60 @@
-
-  <!-- Fuente de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- Hoja de estilos -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Prácticas</title>
   <link rel="stylesheet" href="estilo.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-image: url("clase.png"); /* Asegúrate que esté en la carpeta correcta */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .contenido {
+      text-align: center;
+      padding-top: 40px; /* Espacio desde arriba */
+    }
+    table {
+      margin: 20px auto;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <div id="header">
-    <h1>5 páginas con tonterias </h1>
+  <div class="contenido">
+    <h1>Mis Prácticas</h1>
+    <table>
+      <tr>
+        <td>
+          <img src="apuntes.png" alt="Foto de Víctor López" width="150">
+        </td>
+        <td>
+          <ul>
+            <li><a href="practica1.html">Práctica 1: Currículum</a></li>
+            <li><a href="practica2/index.html">Práctica 2</a>
+          </ul>
+        </td>
+      </tr>
+    </table>
   </div>
-  <div id="content">
-    <img src="mars_spiritcolor.png" alt="marcianos" />
-  </div>
-  <div id="menu"> 
-    <ul>
-    <li><a href="pagina1.html">Marcianos</a></li>
-    <li><a href="pagina2.html">Quiero salir</a></li>
-    <li><a href="pagina3.html">Nuevos pobres</a></li>
-    <li><a href="pagina4.html">Periódico</a></li>
-    <li><a href="pagina5.html">Trabajo</a></li>
-  </ul>
 </body>
 </html>
-
-
-
