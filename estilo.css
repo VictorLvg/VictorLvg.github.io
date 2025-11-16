@@ -9,7 +9,7 @@ body {
 
 /* ====== H1 ====== */
 h1 {
-    background-color: #4e000d; /* Color de fondo */
+    background-color: black; /* Color de fondo */
     color: white; /* Color del texto */
     border-left-width: 8px ; /* Borde lateral */
     border-left-style: solid;
