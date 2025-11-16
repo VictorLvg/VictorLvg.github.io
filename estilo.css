@@ -8,9 +8,9 @@ body {
 
 /* ====== H1 ====== */
 h1 {
-    background-color: #4A2C2A; /* Color de fondo */
-    color: #F5F5DC; /* Color del texto */
-    border-left-width: 8px solid #FF9900; /* Borde lateral */
+    background-color: #4e000d; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-left-width: 8px ; /* Borde lateral */
     border-left-style: solid;
     border-left-color: white;
 }
