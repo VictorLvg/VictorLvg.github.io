@@ -20,7 +20,7 @@ img {
     height: 500px;
     border: 3px solid black; /* Borde negro */
     border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 5px 5px 10px black); /* Sombra */
+    box-shadow: 5px 5px 10px black; /* Sombra */
 }
 
 /* ====== LISTAS ====== */
@@ -37,5 +37,6 @@ a {
     color: white;
   
 }
+
 
 
