@@ -1,55 +1,40 @@
 body {
-    
     text-align: center; /* Centrar contenido */
     background-image: url("../fondo1.png"); /* Cambia por tu imagen */
     background-position: top center; /* Que cubra toda la pantalla */
     background-repeat: no-repeat; /* No repetir */
-    background-attachment: fixed; /* Fondo fijo */
-    font-family: 'Roboto', sans-serif; /* Fuente desde Google Fonts */
+    background-attachment: fixed; /* Fondo fijo */   
 }
 
 /* ====== H1 ====== */
 h1 {
     background-color: #4A2C2A; /* Color de fondo */
     color: #F5F5DC; /* Color del texto */
-    border-left: 8px solid #FF9900; /* Borde lateral */
-    padding: 10px;
-    margin: 20px auto;
-    width: fit-content; /* Ajusta al contenido */
+    border-left-width: 8px solid #FF9900; /* Borde lateral */
+    border-left-style: solid;
+    border-left-color: white;
 }
 
 /* ====== IMÁGENES ====== */
 img {
-    width: 300px; /* Tamaño fijo */
-    height: auto;
+    height: 500px;
     border: 3px solid black; /* Borde negro */
     border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5); /* Sombra */
-    margin: 10px;
+    box-shadow: 5px 5px 10px black); /* Sombra */
 }
 
 /* ====== LISTAS ====== */
 ul {
     list-style-type: none; /* Quitar puntos */
-    padding: 0;
-    margin: 20px 0;
 }
 
 li {
-    display: inline-block; /* Que aparezcan en la misma línea */
+    display: inline; /* Que aparezcan en la misma línea */
     border: 2px solid #333; /* Borde alrededor */
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #EEE;
-    transition: 0.3s;
 }
 
-li:hover {
-    background-color: #CCC; /* Efecto al pasar el ratón */
-
+a {
+    color: white;
+  
 }
-
-
-
-
 
