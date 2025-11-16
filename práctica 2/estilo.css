@@ -1,7 +1,7 @@
 body {
     text-align: center; /* Centrar contenido */
     background-image: url("../fondo1.png"); /* Cambia por tu imagen */
-    background-position: top center; /* Que cubra toda la pantalla */
+    background-position: center; /* Que cubra toda la pantalla */
     background-repeat: no-repeat; /* No repetir */
     background-attachment: fixed; /* Fondo fijo */   
 }
@@ -37,4 +37,5 @@ a {
     color: white;
   
 }
+
 
