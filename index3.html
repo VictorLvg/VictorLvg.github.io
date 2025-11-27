@@ -1,49 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Ejercicio Diseño</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Práctica semana 2 - Réplica exacta</title>
+  <link rel="stylesheet" href="estilos-exacto.css">
 </head>
 <body>
 
-    <header>
-        <h1>Título Principal</h1>
-    </header>
+  <!-- Flecha superior izquierda (SVG embebido) -->
+  <div class="flecha-superior" aria-hidden="true">
+    <!-- flecha arriba -->
+    <svg viewBox="0 0 64 64" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#666" stroke-width="3">
+        <path d="M32 4 L32 44" stroke-linecap="round"/>
+        <path d="M12 20 L32 4 L52 20" stroke-linecap="round" fill="#ddd"/>
+      </g>
+      <rect x="8" y="16" width="48" height="32" rx="8" fill="rgba(255,255,255,0)" stroke="#999" stroke-width="2"/>
+    </svg>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Opción 1</a></li>
-            <li><a href="#">Opción 2</a></li>
-            <li><a href="#">Opción 3</a></li>
-            <li><a href="#">Opción 4</a></li>
-        </ul>
-    </nav>
+  <!-- TITULO -->
+  <h1 class="titulo">Práctica semana 2</h1>
 
-    <section class="contenido">
+  <!-- MENÚ -->
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Marcianos</a></li>
+      <li><a href="#">Quiero salir</a></li>
+      <li><a href="#">Nuevos pobres</a></li>
+      <li><a href="#">Periódico</a></li>
+      <li><a href="#">Trabajo</a></li>
+    </ul>
+  </nav>
 
-        <img src="ksnip_20251127-164816.png" alt="Imagen decorativa" class="lado">
+  <!-- Línea azul fina bajo el menú -->
+  <div class="linea-azul"></div>
 
-        <p class="parrafo p1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel magna eget nunc imperdiet
-            vulputate. Nullam ac erat vitae libero lacinia facilisis.
+  <!-- Créditos centrados encima de la caja -->
+  <div class="creditos">
+    Lorem ipsum obtenido de <a href="http://www.chiquitoipsum.com/">http://www.chiquitoipsum.com/</a>
+  </div>
+
+  <!-- Caja general con flechas laterales y la imagen a la derecha -->
+  <div class="stage">
+
+    <!-- imagen con marco a la derecha -->
+    <div class="imagen-wrap" aria-hidden="true">
+      <img src="periodico.png" alt="Viñeta sobre periódico">
+    </div>
+
+    <!-- flechas laterales (varias para apariencia idéntica) -->
+    <div class="flechas-izq" aria-hidden="true">
+      <svg class="flecha-l" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M40 8 L16 32 L40 56" stroke="#999" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </div>
+
+    <div class="flechas-der" aria-hidden="true">
+      <svg class="flecha-r" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M24 8 L48 32 L24 56" stroke="#999" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </div>
+
+    <!-- Caja con doble borde (exterior + punteado interior) -->
+    <div class="caja-doble" role="region" aria-label="Caja de contenido">
+
+      <!-- Pseudo-panel punteado y margen izquierdo para las flechas (se visualiza igual que la imagen) -->
+      <div class="panel-interior">
+
+        <!-- Párrafos; ocupan 90% de la ventana y están separados 10px entre sí -->
+        <p class="parrafo parrafo1">
+          Lorem fistrum está la cosa muy malar apetecan se calle ustée diodenoo me cago en tus muelas ese pedazo de. Mamaar ese hombree por la gloria de mi madre ahorarr no te digo trigo por no llamarte Rodrigor ese hombree ahorraror ese hombree. Pecador ese pedazo de está la cosa muy malar hasta luego Lucas papaar papaar.
         </p>
 
-        <p class="parrafo p2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id aliquet lacus. Donec
-            tincidunt placerat ligula, ut tincidunt lectus.
+        <p class="parrafo parrafo2">
+          Está la cosa muy malar se calle ustée diodenoo benemeritaar no puedor va usté muy cargadoo no puedor. Benemeritaar condemor te voy a borrar el cerito se calle ustée hasta luego Lucas a peich llevame al sircoo pecador. Me cago en tus muelas ese pedazo de sexual tiene musho peligro pecador te voy a borrar el cerito condemor.
         </p>
 
-        <p class="parrafo p3">
-            Nulla facilisi. Etiam cursus libero at magna volutpat, vel eleifend orci semper. Mauris ac
-            arcu nec massa facilisis tincidunt.
+        <p class="parrafo parrafo3">
+          Pecador hasta luego Lucas caballo blanco caballo negrorl de la pradera. Llevame al sircoo te va a hasé pupita te voy a borrar el cerito ahorrar jarl me cago en tus muelas. De la pradera va usté muy cargadoo benemeritaar pecador.
         </p>
 
-    </section>
+      </div>
+    </div>
 
-    <footer>
-        <p>Pie de página</p>
-    </footer>
+  </div>
+
+  <!-- Barras y footer -->
+  <div class="barra-footer"></div>
+
+  <footer class="pie">
+    <p>Práctica realizada con fines educativos.</p>
+  </footer>
 
 </body>
 </html>
