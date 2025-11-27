@@ -1,141 +1,83 @@
-/* Fondo general */
-body {
-  background-color: #d5c7e8;
-  font-family: Arial;
-  margin: 0;
-  padding: 0;
+/* ----- TITULO SUPERIOR ----- */
+header {
+    border-bottom: 5px solid black;
+    margin-bottom: 10px;
 }
 
-/* Flecha superior */
-.flecha-superior {
-  background: url("flecha_arriba.png") no-repeat center;
-  height: 80px;
-  margin-top: 10px;
-}
-
-/* Título */
-h1 {
-  text-align: center;
-  font-size: 2.5em;
-  margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 6px solid black;
-}
-
-/* Imagen con marco */
-.box-img {
-  float: right;
-  width: 430px;
-  margin: 30px 50px 0 0;
-  border: 4px solid black;
-  background-color: white;
-  padding: 10px;
-}
-
-.box-img img {
-  width: 100%;
-  display: block;
-}
-
-/* Menú */
+/* ----- MENU ----- */
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-  background-color: #fffdb0;
-  display: flex;
-  justify-content: center;
-  border-bottom: 5px solid #003366;
+    list-style: none;
+    padding: 0;
 }
 
-nav li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  border-left: 5px solid red;
-  padding: 0 15px;
+nav li {
+    border-left: 5px solid red;  /* Línea roja antes de cada opción */
+    padding-left: 10px;
+    margin: 5px 0;
 }
 
-/* Créditos */
-.creditos {
-  text-align: center;
-  margin: 15px 0;
-  font-style: italic;
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-/* Caja general alrededor de todos los párrafos */
-.caja-general {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 40px;
+nav a:hover {
+    text-decoration: underline red; /* Condición 14 */
 }
 
-/* Flechas laterales */
-.flecha-izq,
-.flecha-der {
-  width: 70px;
-  height: 350px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 60px;
+/* ----- IMAGEN ----- */
+.lado {
+    float: right;
+    margin-right: 60px; /* Separación derecha 60px */
+    width: 250px;
+    border: 5px solid black;
 }
 
-.flecha-izq {
-  background-image: url("flecha_izq.png");
-  left: -80px;
+/* ----- PÁRRAFOS ----- */
+.contenido {
+    width: 90%; /* Condición 10 */
+    margin: auto;
 }
 
-.flecha-der {
-  background-image: url("flecha_der.png");
-  right: -80px;
+.parrafo {
+    padding: 15px;
+    margin: 10px 0; /* Condición 11 */
+    text-indent: 40px; /* Sangría primera línea */
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* Sombras */
+    background-color: white;
 }
 
-/* Caja con doble borde */
-.contenedor-parrafos {
-  background: white;
-  border: 5px solid #333;
-  border-radius: 20px;
-  padding: 20px;
-  position: relative;
-}
-
-.contenedor-parrafos::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 3px dashed #333;
-  border-radius: 15px;
-}
-
-/* Párrafos */
-.contenedor-parrafos p {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-  text-indent: 40px;
-}
-
-/* Párrafo superior redondeado */
+/* Primer párrafo */
 .p1 {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background-image: url("fondo.png");
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; /* Esquinas superiores */
+    background-image: url("patron.png"); /* Fondo repetido */
+    background-repeat: repeat;
 }
 
-/* Párrafo inferior redondeado */
+/* Último párrafo */
 .p3 {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px; /* Esquinas inferiores */
 }
 
-/* Footer */
+/* ----- PIE DE PÁGINA ----- */
 footer {
-  text-align: center;
-  background-color: #e9bada;
-  padding: 15px;
-  margin-top: 50px;
-  border-top: 5px solid #003366;
+    border-top: 5px solid black;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* ----- MEDIA QUERY ----- */
+@media all and (max-width: 500px) {
+
+    .lado {
+        border-color: red; /* Borde de la imagen rojo */
+        width: 90%; /* La imagen ocupa el 90% */
+        float: none; /* Deja de flotar */
+        display: block;
+        margin: 0 auto; /* Centrada */
+    }
 }
