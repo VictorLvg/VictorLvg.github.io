@@ -1,11 +1,11 @@
-/* Título con línea inferior */
+/* 1. Línea de 5px negra debajo del título */
 h1 {
   border-bottom: 5px solid black;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-/* Menú con línea roja a la izquierda de cada enlace */
+/* 7. Menú con línea roja a la izquierda de cada enlace */
 nav ul {
   list-style: none;
   padding: 0;
@@ -25,20 +25,20 @@ nav li a:hover {
   text-decoration-color: red;
 }
 
-/* Imagen alineada a la derecha con margen */
+/* 2 y 3. Imagen alineada a la derecha con margen */
 img {
   float: right;
   margin-right: 60px;
   max-width: 300px;
 }
 
-/* Contenedor de párrafos */
+/* 10. Contenedor de párrafos al 90% */
 .container-parrafos {
   width: 90%;
   margin: auto;
 }
 
-/* Párrafos con sombra, sangría y separación */
+/* 5, 9, 11. Párrafos con sombra, sangría y separación */
 .container-parrafos p {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-indent: 40px;
@@ -46,7 +46,7 @@ img {
   padding: 15px;
 }
 
-/* Primer párrafo con esquinas superiores redondeadas y fondo repetido */
+/* 4 y 12. Primer párrafo con esquinas superiores y fondo repetido */
 .parrafo1 {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -54,13 +54,13 @@ img {
   background-repeat: repeat;
 }
 
-/* Último párrafo con esquinas inferiores redondeadas */
+/* 8. Último párrafo con esquinas inferiores */
 .parrafo3 {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-/* Pie de página con línea superior */
+/* 6. Pie de página con línea superior */
 footer {
   border-top: 5px solid black;
   background-color: #FFCCCC;
@@ -68,7 +68,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Colores del esquema ColorCombo14 */
+/* 15. Colores del esquema ColorCombo14 */
 body {
   background-color: #CCFFCC;
   color: #003366;
@@ -78,7 +78,7 @@ nav {
   background-color: #FFFFCC;
 }
 
-/* Media query para pantallas pequeñas */
+/* 13. Media query para pantallas pequeñas */
 @media all and (max-width: 500px) {
   img {
     border: 3px solid red;
