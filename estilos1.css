@@ -3,12 +3,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #ffffff; /* fondo blanco como en la imagen */
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff; /* fondo blanco */
+  font-family: Arial, sans-serif;
   color: #003366;
 }
 
-/* TÍTULO CENTRADO CON LÍNEA NEGRA */
+/* Título */
 .titulo {
   text-align: center;
   font-size: 32px;
@@ -17,7 +17,85 @@ html, body {
   border-bottom: 5px solid black;
 }
 
-/* MENÚ CON SEPARADORES REALES Y BARRA ROJA IZQUIERDA */
+/* Caja doble */
+.caja-doble {
+  margin: 20px auto;
+  padding: 12px;
+  border: 6px solid #222;
+  border-radius: 18px;
+  width: 85%;
+  position: relative;
+}
+.panel-interior {
+  position: relative;
+  padding: 18px 14px;
+  border-radius: 12px;
+}
+.panel-interior::before {
+  content: "";
+  position: absolute;
+  left: 4px; top: 4px; right: 4px; bottom: 4px;
+  border: 4px dashed black;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Párrafos */
+.parrafo {
+  width: 90%;
+  margin: 10px auto;
+  padding: 14px 18px;
+  text-indent: 40px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+  font-size: 13px;
+  line-height: 1.15;
+  color: #12314b;
+  background: #fff;
+  border-radius: 6px;
+}
+.parrafo1 {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: repeating-linear-gradient(135deg,
+    rgba(0,0,0,0.06) 0px,
+    rgba(0,0,0,0.06) 3px,
+    transparent 3px,
+    transparent 6px);
+}
+.parrafo2,
+.parrafo3 {
+  background-color: #e9e0f0; /* fondo lila */
+}
+.parrafo3 {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* Imagen viñeta superpuesta */
+.imagen-wrap {
+  position: absolute;
+  top: 160px;
+  right: 40px;
+  width: 420px;
+  border: 6px solid black;
+  background: #fff;
+  padding: 8px;
+  z-index: 10;
+}
+.imagen-wrap img {
+  width: 100%;
+  display: block;
+}
+
+/* Créditos */
+.creditos {
+  text-align: center;
+  font-size: 14px;
+  color: #2e4b7d;
+  margin: 12px 0;
+}
+
+/* Menú horizontal */
 .menu ul {
   display: flex;
   justify-content: center;
@@ -43,110 +121,16 @@ html, body {
   text-decoration-color: red;
 }
 
-/* LÍNEA AZUL BAJO EL MENÚ */
-.linea-azul {
-  height: 6px;
-  width: 85%;
-  margin: 6px auto;
-  border-top: 4px solid #003366;
-}
-
-/* CRÉDITOS CENTRADOS */
-.creditos {
-  text-align: center;
-  font-size: 14px;
-  color: #2e4b7d;
-  margin: 6px 0 18px;
-}
-
-/* IMAGEN FLOTANTE QUE ATRAVIESA LA CAJA */
-.imagen-wrap {
-  position: absolute;
-  top: 160px;
-  right: 40px;
-  width: 420px;
-  border: 6px solid black;
-  background: #fff;
-  padding: 8px;
-  z-index: 10;
-}
-.imagen-wrap img {
-  width: 100%;
-  display: block;
-}
-
-/* FLECHAS LATERALES */
-.flechas-izq, .flechas-der {
-  position: absolute;
-  top: 170px;
-  width: 60px;
-  height: 300px;
-  opacity: 0.95;
-}
-.flechas-izq { left: -56px; }
-.flechas-der { right: -56px; transform: scaleX(-1); }
-
-/* CAJA DOBLE CON BORDE GRUESO + PUNTEADO INTERIOR */
-.caja-doble {
-  margin-top: 20px;
-  padding: 12px;
-  border: 6px solid #222;
-  border-radius: 18px;
-  position: relative;
-}
-.panel-interior {
-  position: relative;
-  padding: 18px 14px;
-  border-radius: 12px;
-}
-.panel-interior::before {
-  content: "";
-  position: absolute;
-  left: 4px; top: 4px; right: 4px; bottom: 4px;
-  border: 4px dashed black;
-  border-radius: 12px;
-  pointer-events: none;
-}
-
-/* PÁRRAFOS CON SOMBRA, SANGRÍA Y FONDOS DIFERENCIADOS */
-.parrafo {
-  width: 90%;
-  margin: 10px auto;
-  padding: 14px 18px;
-  text-indent: 40px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
-  font-size: 13px;
-  line-height: 1.15;
-  color: #12314b;
-  background: #fff;
-  border-radius: 6px;
-}
-.parrafo1 {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background-image: repeating-linear-gradient(135deg,
-    rgba(0,0,0,0.06) 0px,
-    rgba(0,0,0,0.06) 3px,
-    transparent 3px,
-    transparent 6px);
-}
-.parrafo2,
-.parrafo3 {
-  background-color: #e9e0f0; /* fondo lila solo en párrafos 2 y 3 */
-}
-.parrafo3 {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-/* BARRA INFERIOR Y PIE DE PÁGINA */
+/* Barra inferior */
 .barra-footer {
   width: 100%;
   height: 12px;
   border-top: 4px solid #2b3862;
-  margin-top: 28px;
+  margin-top: 20px;
   box-shadow: 0 6px 0 0 rgba(230,180,200,0.6) inset;
 }
+
+/* Pie */
 .pie {
   background: #f2cfe0;
   border-top: 5px solid black;
