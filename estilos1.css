@@ -1,87 +1,89 @@
-*{
-
-}
-
-body {
-  
-}
-
+/* 1. Línea de 5px negra debajo del título */
 h1 {
-
+  border-bottom: 5px solid black;
 }
 
+/* 2 y 3. Imagen alineada a la derecha con margen derecho de 60px */
 img {
-  
+  float: right;
+  margin-right: 60px;
 }
 
-ul {
-
+/* 4. Esquinas superiores redondeadas del primer párrafo */
+.container-parrafos p:first-of-type {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: url('fondo.png'); /* 12. Fondo que se repite */
+  background-repeat: repeat;
 }
 
-li {
-
+/* 5. Sombra en los tres párrafos */
+.container-parrafos p {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-p {
-  
+/* 6. Línea superior de 5px negra en el pie de página */
+footer {
+  border-top: 5px solid black;
 }
 
-#header {
-  
+/* 7. Línea roja de 5px a la izquierda de cada opción de menú */
+nav a {
+  border-left: 5px solid red;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #003366; /* ColorCombo14 */
 }
 
-#content{
-  
+/* 8. Esquinas inferiores redondeadas del último párrafo */
+.container-parrafos p:last-of-type {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-#text {
-  
+/* 9. Sangría de 40px en la primera línea de cada párrafo */
+.container-parrafos p {
+  text-indent: 40px;
 }
 
-#text p {
-  
+/* 10. Párrafos ocupan el 90% del ancho de la ventana */
+.container-parrafos {
+  width: 90%;
+  margin: auto;
 }
 
-#text p:first-child {
-  
+/* 11. Separación de 10px entre párrafos */
+.container-parrafos p + p {
+  margin-top: 10px;
 }
 
-#text p:last-child {
-
-}
-
-#menu {
-
-}
-
-#menu a{
-
-}
-
-
-#menu li{
-
-}
-
-#menu li a:hover{
-
-}
-
-#footer{
-
-}
-
-#footer a{
-
-}
-
-#footer a:hover{
-
-}
-#image {
-
-}
-
+/* 13. Media query para pantallas menores de 500px */
 @media all and (max-width: 500px) {
+  img {
+    border: 3px solid red;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
+}
 
+/* 14. Hover en enlaces del menú con subrayado rojo */
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+/* 15. Colores del esquema ColorCombo14 */
+body {
+  background-color: #CCFFCC;
+  color: #003366;
+}
+
+nav {
+  background-color: #FFFFCC;
+}
+
+footer {
+  background-color: #FFCCCC;
 }
