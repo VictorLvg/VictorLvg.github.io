@@ -86,13 +86,13 @@ html, body {
 /* Viñeta: arriba derecha del párrafo 1, alineada a la derecha y separada 60px */
 .imagen-wrap {
   position: absolute;
-  top: 0;                 /* referencia: parte superior del contenido interno */
-  right: 60px;            /* separación de 60px respecto al borde derecho */
+  top: 80px;              /* ajustado para que quede entre título y párrafo */
+  right: 60px;            /* separación exacta del borde derecho */
   width: 360px;
   background: #fff;
-  border: 5px solid #000; /* borde negro en desktop */
-  padding: 8px 8px 6px;
-  z-index: 5;             /* sobre el punteado, pero sin tapar el texto */
+  border: 5px solid #000;
+  padding: 8px;
+  z-index: 10;            /* por encima del fondo, pero debajo del texto */
 }
 .imagen-wrap img {
   width: 100%;
