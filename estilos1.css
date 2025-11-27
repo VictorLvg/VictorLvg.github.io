@@ -5,22 +5,22 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* 7. Menú con línea roja a la izquierda de cada enlace */
-nav ul {
-  list-style: none;
-  padding: 0;
+/* 7. Menú horizontal con línea roja a la izquierda de cada enlace */
+nav {
   display: flex;
   gap: 20px;
+  background-color: #FFFFCC; /* ColorCombo14 */
+  padding: 10px;
 }
 
-nav li a {
+nav a {
   border-left: 5px solid red;
   padding-left: 10px;
   text-decoration: none;
   color: #003366;
 }
 
-nav li a:hover {
+nav a:hover {
   text-decoration: underline;
   text-decoration-color: red;
 }
@@ -44,6 +44,7 @@ img {
   text-indent: 40px;
   margin-bottom: 10px;
   padding: 15px;
+  background-color: #FFFFFF;
 }
 
 /* 4 y 12. Primer párrafo con esquinas superiores y fondo repetido */
@@ -63,19 +64,16 @@ img {
 /* 6. Pie de página con línea superior */
 footer {
   border-top: 5px solid black;
-  background-color: #FFCCCC;
+  background-color: #FFCCCC; /* ColorCombo14 */
   padding: 10px;
   margin-top: 40px;
+  text-align: center;
 }
 
-/* 15. Colores del esquema ColorCombo14 */
+/* 15. Color de fondo limpio */
 body {
-  background-color: #CCFFCC;
+  background-color: #FFFFFF;
   color: #003366;
-}
-
-nav {
-  background-color: #FFFFCC;
 }
 
 /* 13. Media query para pantallas pequeñas */
