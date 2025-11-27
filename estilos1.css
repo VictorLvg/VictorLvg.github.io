@@ -90,7 +90,7 @@ html, body {
 /* Viñeta: arriba derecha del párrafo 1, alineada a la derecha y separada 60px */
 .imagen-wrap {
   position: absolute;
-  top: 10px;              /* ajustado para que quede entre título y párrafo */
+  top: -20px;              /* ajustado para que quede entre título y párrafo */
   right: 60px;            /* separación exacta del borde derecho */
   width: 360px;
   background: #fff;
