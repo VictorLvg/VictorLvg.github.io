@@ -1,80 +1,74 @@
-/* 1. Línea de 5px negra debajo del título */
+/* Título con línea inferior */
 h1 {
   border-bottom: 5px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-/* 2 y 3. Imagen alineada a la derecha con margen derecho de 60px */
-img {
-  float: right;
-  margin-right: 60px;
+/* Menú con línea roja a la izquierda de cada enlace */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
-/* 4. Esquinas superiores redondeadas del primer párrafo */
-.container-parrafos p:first-of-type {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background-image: url('fondo.png'); /* 12. Fondo que se repite */
-  background-repeat: repeat;
-}
-
-/* 5. Sombra en los tres párrafos */
-.container-parrafos p {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* 6. Línea superior de 5px negra en el pie de página */
-footer {
-  border-top: 5px solid black;
-}
-
-/* 7. Línea roja de 5px a la izquierda de cada opción de menú */
-nav a {
+nav li a {
   border-left: 5px solid red;
   padding-left: 10px;
   text-decoration: none;
-  color: #003366; /* ColorCombo14 */
+  color: #003366;
 }
 
-/* 8. Esquinas inferiores redondeadas del último párrafo */
-.container-parrafos p:last-of-type {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+nav li a:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 
-/* 9. Sangría de 40px en la primera línea de cada párrafo */
-.container-parrafos p {
-  text-indent: 40px;
+/* Imagen alineada a la derecha con margen */
+img {
+  float: right;
+  margin-right: 60px;
+  max-width: 300px;
 }
 
-/* 10. Párrafos ocupan el 90% del ancho de la ventana */
+/* Contenedor de párrafos */
 .container-parrafos {
   width: 90%;
   margin: auto;
 }
 
-/* 11. Separación de 10px entre párrafos */
-.container-parrafos p + p {
-  margin-top: 10px;
+/* Párrafos con sombra, sangría y separación */
+.container-parrafos p {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-indent: 40px;
+  margin-bottom: 10px;
+  padding: 15px;
 }
 
-/* 13. Media query para pantallas menores de 500px */
-@media all and (max-width: 500px) {
-  img {
-    border: 3px solid red;
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    float: none;
-  }
+/* Primer párrafo con esquinas superiores redondeadas y fondo repetido */
+.parrafo1 {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: url('fondo.png');
+  background-repeat: repeat;
 }
 
-/* 14. Hover en enlaces del menú con subrayado rojo */
-nav a:hover {
-  text-decoration: underline;
-  text-decoration-color: red;
+/* Último párrafo con esquinas inferiores redondeadas */
+.parrafo3 {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-/* 15. Colores del esquema ColorCombo14 */
+/* Pie de página con línea superior */
+footer {
+  border-top: 5px solid black;
+  background-color: #FFCCCC;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Colores del esquema ColorCombo14 */
 body {
   background-color: #CCFFCC;
   color: #003366;
@@ -84,6 +78,13 @@ nav {
   background-color: #FFFFCC;
 }
 
-footer {
-  background-color: #FFCCCC;
+/* Media query para pantallas pequeñas */
+@media all and (max-width: 500px) {
+  img {
+    border: 3px solid red;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
 }
