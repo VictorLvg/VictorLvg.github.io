@@ -83,10 +83,14 @@ html, body {
   border-bottom-right-radius: 30px;
 }
 
+.zona-vineta {
+  position: relative;
+  height: 220px; /* ajusta según el alto real de la viñeta */
+}
 /* Viñeta: arriba derecha del párrafo 1, alineada a la derecha y separada 60px */
 .imagen-wrap {
   position: absolute;
-  top: 80px;              /* ajustado para que quede entre título y párrafo */
+  top: 0;              /* ajustado para que quede entre título y párrafo */
   right: 60px;            /* separación exacta del borde derecho */
   width: 360px;
   background: #fff;
