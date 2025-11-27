@@ -1,21 +1,21 @@
-/* 1. Línea de 5px negra debajo del título */
+/* Título con línea inferior */
 h1 {
   border-bottom: 5px solid black;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-/* 7. Menú horizontal con línea roja a la izquierda de cada enlace */
+/* Menú con separadores y línea roja a la izquierda */
 nav {
-  display: flex;
-  gap: 20px;
-  background-color: #FFFFCC; /* ColorCombo14 */
+  background-color: #FFFFCC;
   padding: 10px;
+  font-weight: bold;
 }
 
 nav a {
   border-left: 5px solid red;
   padding-left: 10px;
+  margin-right: 10px;
   text-decoration: none;
   color: #003366;
 }
@@ -25,20 +25,23 @@ nav a:hover {
   text-decoration-color: red;
 }
 
-/* 2 y 3. Imagen alineada a la derecha con margen */
+/* Imagen alineada a la derecha con margen */
 img {
   float: right;
   margin-right: 60px;
   max-width: 300px;
 }
 
-/* 10. Contenedor de párrafos al 90% */
+/* Contenedor de párrafos con borde punteado */
 .container-parrafos {
   width: 90%;
   margin: auto;
+  border: 2px dashed #003366;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* 5, 9, 11. Párrafos con sombra, sangría y separación */
+/* Párrafos con sombra, sangría y separación */
 .container-parrafos p {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-indent: 40px;
@@ -47,7 +50,7 @@ img {
   background-color: #FFFFFF;
 }
 
-/* 4 y 12. Primer párrafo con esquinas superiores y fondo repetido */
+/* Primer párrafo con esquinas superiores y fondo repetido */
 .parrafo1 {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -55,28 +58,28 @@ img {
   background-repeat: repeat;
 }
 
-/* 8. Último párrafo con esquinas inferiores */
+/* Último párrafo con esquinas inferiores */
 .parrafo3 {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-/* 6. Pie de página con línea superior */
+/* Pie de página con línea superior */
 footer {
   border-top: 5px solid black;
-  background-color: #FFCCCC; /* ColorCombo14 */
+  background-color: #FFCCCC;
   padding: 10px;
   margin-top: 40px;
   text-align: center;
 }
 
-/* 15. Color de fondo limpio */
+/* Fondo limpio y colores del esquema */
 body {
   background-color: #FFFFFF;
   color: #003366;
 }
 
-/* 13. Media query para pantallas pequeñas */
+/* Responsive para pantallas pequeñas */
 @media all and (max-width: 500px) {
   img {
     border: 3px solid red;
@@ -85,4 +88,3 @@ body {
     margin: 0 auto;
     float: none;
   }
-}
