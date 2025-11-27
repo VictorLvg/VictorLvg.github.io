@@ -1,235 +1,130 @@
-/* -------------------------
-   RESET / BASE
-   ------------------------- */
+/* RESET */
 * { box-sizing: border-box; }
-html,body { height: 100%; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; background: #fff; }
 
-/* -------------------------
-   FONDO GLOBAL
-   ------------------------- */
-body {
-  background-color: #e9e0f0; /* lila claro como en la imagen */
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #003366;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* -------------------------
-   FLECHA SUPERIOR (posición absoluta visual)
-   ------------------------- */
-.flecha-superior {
-  position: absolute;
-  left: 20px;
-  top: 6px;
-  z-index: 10;
-}
-
-/* -------------------------
-   TITULO (centrado con línea inferior 5px negra)
-   ------------------------- */
+/* Título */
 .titulo {
   text-align: center;
-  margin: 0;
-  padding: 18px 0 12px 0;
   font-size: 32px;
-  font-weight: 700;
-  border-bottom: 5px solid #000; /* línea de 5px negra */
-  background: transparent;
+  font-weight: bold;
+  padding: 18px 0 12px;
+  border-bottom: 5px solid black;
 }
 
-/* -------------------------
-   MENÚ (centrado, fondo amarillo claro, items con barra roja a la izquierda)
-   ------------------------- */
-.menu { margin: 10px 0 0 0; }
+/* Menú */
 .menu ul {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 10px;
   list-style: none;
-  margin: 0;
-  padding: 8px 12px;
-  background: #fffdbd; /* amarillo pálido */
-  border-bottom: 3px solid transparent;
-}
-.menu ul li {
-  display: inline-block;
-  padding-left: 8px;
+  background: #fffdbd;
+  padding: 10px;
   margin: 0;
 }
 .menu ul li a {
+  border-left: 5px solid red;
+  padding-left: 10px;
   text-decoration: none;
   color: #003366;
-  font-weight: 700;
-  position: relative;
-  padding-left: 10px;
-  display: inline-block;
+  font-weight: bold;
 }
-
-/* Barrita roja a la izquierda de cada opción (5px) */
-.menu ul li a::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 14px;
-  background: #cc0000;
-  border-radius: 1px;
-}
-
-/* Hover: subrayado rojo exacto */
 .menu ul li a:hover {
   text-decoration: underline;
-  text-decoration-color: #cc0000;
-  text-underline-offset: 3px;
+  text-decoration-color: red;
 }
 
-/* línea azul fina justo debajo del menú (visual) */
+/* Línea azul */
 .linea-azul {
   height: 6px;
   width: 85%;
-  max-width: 1200px;
   margin: 6px auto;
   border-top: 4px solid #003366;
-  border-bottom: 2px solid transparent;
 }
 
-/* créditos centrados justo debajo del menú */
+/* Créditos */
 .creditos {
   text-align: center;
   font-size: 14px;
   color: #2e4b7d;
-  margin: 6px 0 18px 0;
+  margin: 6px 0 18px;
 }
 
-/* -------------------------
-   STAGE: área principal donde está la imagen y la caja de párrafos
-   ------------------------- */
-.stage {
-  width: 94%;
-  max-width: 1250px;
-  margin: 0 auto;
-  position: relative;
-  padding: 10px 0 40px 0;
-}
-
-/* -------------------------
-   IMAGEN (alineada a la derecha, separación de 60px, borde negro)
-   ------------------------- */
+/* Imagen flotante */
 .imagen-wrap {
-  float: right;
-  margin-right: 60px; /* separación derecha 60px */
+  position: absolute;
+  top: 160px;
+  right: 40px;
   width: 420px;
-  border: 6px solid #000; /* borde negro visible como en la imagen */
+  border: 6px solid black;
   background: #fff;
   padding: 8px;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.05) inset;
-  border-radius: 2px;
+  z-index: 10;
 }
 .imagen-wrap img {
-  display: block;
   width: 100%;
-  height: auto;
+  display: block;
 }
 
-/* -------------------------
-   FLECHAS LATERALES (izq / der) - posición y repetición visual
-   ------------------------- */
+/* Flechas */
 .flechas-izq, .flechas-der {
   position: absolute;
   top: 170px;
   width: 60px;
   height: 300px;
-  pointer-events: none;
   opacity: 0.95;
 }
 .flechas-izq { left: -56px; }
 .flechas-der { right: -56px; transform: scaleX(-1); }
 
-/* -------------------------
-   CAJA DOBLE (borde exterior grueso + interior punteado)
-   ------------------------- */
+/* Caja doble */
 .caja-doble {
-  position: relative;
   margin-top: 20px;
   padding: 12px;
+  border: 6px solid #222;
   border-radius: 18px;
-  border: 6px solid #222; /* borde exterior grueso */
-  background: transparent;
-  overflow: visible;
+  position: relative;
 }
-
-/* interior punteado: se crea con pseudo-elemento dentro de .panel-interior */
 .panel-interior {
   position: relative;
-  border-radius: 12px;
   padding: 18px 14px;
-  background: transparent;
+  border-radius: 12px;
 }
-
-/* dashed inner rectangle visual */
 .panel-interior::before {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
+  left: 4px; top: 4px; right: 4px; bottom: 4px;
+  border: 4px dashed black;
   border-radius: 12px;
-  border: 4px dashed #000;
   pointer-events: none;
-  box-sizing: border-box;
 }
 
-/* -------------------------
-   PÁRRAFOS (3) - ocupan 90% de la ventana, separados 10px, sangría 40px, sombras
-   ------------------------- */
+/* Párrafos */
 .parrafo {
-  display: block;
-  width: 90vw;               /* ocupan 90% del ancho de la ventana */
-  max-width: calc(100% - 200px); /* evita overflow en pantallas grandes dentro del contenedor */
-  margin: 10px auto;         /* separación entre párrafos de 10px y centrado dentro de su contenedor */
+  width: 90%;
+  margin: 10px auto;
   padding: 14px 18px;
-  background: #ffffff;
-  text-indent: 40px;        /* sangría primera línea */
+  text-indent: 40px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+  font-size: 13px;
   line-height: 1.15;
   color: #12314b;
-  font-size: 13px;
+  background: #fff;
   border-radius: 6px;
-  position: relative;
-  overflow: hidden;
 }
-
-/* Primer párrafo: esquinas superiores redondeadas (30px) y patrón repetido */
 .parrafo1 {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  background-image:
-    repeating-linear-gradient(135deg,
-      rgba(0,0,0,0.06) 0px,
-      rgba(0,0,0,0.06) 3px,
-      transparent 3px,
-      transparent 6px
-    ),
-    #fff;
-  background-size: auto;
+  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 3px, transparent 3px, transparent 6px);
 }
-
-/* Segundo párrafo: normal */
-.parrafo2 { }
-
-/* Tercer párrafo: esquinas inferiores redondeadas (30px) */
+.parrafo2, .parrafo3 {
+  background-color: #e9e0f0;
+}
 .parrafo3 {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-/* -------------------------
-   BARRA Y PIE
-   ------------------------- */
+/* Barra y pie */
 .barra-footer {
   width: 100%;
   height: 12px;
@@ -237,45 +132,39 @@ body {
   margin-top: 28px;
   box-shadow: 0 6px 0 0 rgba(230,180,200,0.6) inset;
 }
-
-/* Footer con línea superior de 5px negra y fondo rosa claro */
 .pie {
-  margin: 0;
-  padding: 12px 0;
-  text-align: center;
   background: #f2cfe0;
-  border-top: 5px solid #000; /* línea superior 5px negra */
+  border-top: 5px solid black;
+  text-align: center;
+  padding: 12px 0;
   color: #2b3862;
 }
 
-/* -------------------------
-   Media query para <=500px
-   - borde de imagen rojo
-   - imagen ocupa 90% del total y centrada
-   ------------------------- */
+/* Responsive */
 @media all and (max-width: 500px) {
-
-  /* imagen: rojo, 90% y centrada */
   .imagen-wrap {
-    float: none !important;
-    margin: 10px auto !important;
-    display: block;
-    width: 90% !important;
-    border-color: red !important;
+    position: static;
+    width: 90%;            /* ocupa el 90% del ancho */
+    max-width: 420px;      /* no sobrepasa su tamaño original */
+    margin: 10px auto 16px;
+    padding: 8px;
+    border: 3px solid red; /* borde rojo en móvil */
+    float: none;           /* se centra, no flota a la derecha */
+    z-index: auto;
   }
 
-  /* las flechas laterales se ocultan en móvil */
-  .flechas-izq, .flechas-der, .flecha-superior { display: none; }
+  .flechas-izq,
+  .flechas-der,
+  .flecha-superior {
+    display: none;         /* oculta flechas en móvil */
+  }
 
-  /* los párrafos se mantienen al 90% */
-  .parrafo { width: 90%; max-width: none; }
+  .parrafo {
+    width: 90%;            /* párrafos al 90% también */
+    max-width: none;
+  }
 
-  .stage { padding-bottom: 20px; }
-}
-
-/* -------------------------
-   Ajustes visuales menores para evitar overflow horizontal
-   ------------------------- */
-@media (min-width: 1100px) {
-  .parrafo { max-width: 980px; }
+  .stage {
+    padding-bottom: 20px;  /* respiración extra */
+  }
 }
