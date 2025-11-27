@@ -1,90 +1,98 @@
 * { box-sizing: border-box; }
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #ffffff;
   font-family: Verdana, sans-serif;
   color: #1a1a1a;
 }
 
-/* Título */
+/* Título con línea de 5px negra */
 .titulo {
   text-align: center;
-  font-size: 30px;            /* ligeramente menor */
+  font-size: 30px;
   font-weight: bold;
-  padding: 18px 0 10px;
-  border-bottom: 4px solid #000;  /* línea más fina */
+  padding: 18px 0 12px;
+  border-bottom: 5px solid #000;
 }
 
-/* Contenedor y caja doble */
+/* Contenedor principal */
 .contenedor-principal {
-  position: relative;
-  width: 86%;
-  margin: 16px auto 0;
+  width: 90%;             /* los párrafos ocuparán 90% de la ventana (base) */
+  margin: 0 auto;
 }
 
+/* Caja doble con separación interna para los 10px de respiro */
 .caja-doble {
   border: 6px solid #000;
   border-radius: 18px;
-  padding: 10px;              /* menos padding */
+  padding: 10px;          /* 10px de separación respecto a la caja asignada */
   position: relative;
 }
-
 .panel-interior {
   position: relative;
-  padding: 10px;              /* menos padding para acercar el punteado */
+  padding: 8px;           /* punteado cercano al borde */
   border-radius: 12px;
 }
 .panel-interior::before {
   content: "";
   position: absolute;
-  top: 4px; left: 4px; right: 4px; bottom: 4px;  /* punteado más cerca */
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
   border: 4px dashed #000;
   border-radius: 12px;
   pointer-events: none;
 }
 
-/* Párrafos */
+/* Párrafos (90% de la ventana, sombras, sangría) */
 .parrafo {
-  width: 86%;
-  margin: 14px auto 18px;     /* más separación vertical */
+  width: 90vw;            /* ocupa el 90% de la ventana */
+  max-width: calc(100% - 20px); /* asegura que respete la caja interna */
+  margin: 12px auto;
   padding: 14px 18px;
-  text-indent: 36px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.22);
+  text-indent: 40px;      /* sangría de 40px */
   font-size: 13px;
   line-height: 1.35;
-  border-radius: 6px;
-  color: #132c4a;             /* tono más oscuro */
+  color: #132c4a;
   background: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.25); /* sombras en los tres */
 }
+
+/* Primer párrafo: redondeo superior 30px y patrón repetido */
 .parrafo1 {
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
-  background-image: repeating-linear-gradient(135deg,
-    rgba(0,0,0,0.07) 0px,
-    rgba(0,0,0,0.07) 3px,
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(0,0,0,0.08) 0px,
+    rgba(0,0,0,0.08) 3px,
     transparent 3px,
-    transparent 6px);
+    transparent 6px
+  );
 }
+
+/* Párrafos 2 y 3: fondo lila */
 .parrafo2,
 .parrafo3 {
   background-color: #e9e0f0;
 }
+
+/* Último párrafo: redondeo inferior 30px */
 .parrafo3 {
-  border-bottom-left-radius: 28px;
-  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-/* Viñeta superpuesta */
+/* Viñeta: arriba derecha del párrafo 1, alineada a la derecha y separada 60px */
 .imagen-wrap {
   position: absolute;
-  top: -8px;                  /* subir para alinear con el primer párrafo */
-  right: -28px;               /* menos intrusión y más realista */
-  width: 360px;               /* tamaño más contenido */
+  top: 0;                 /* referencia: parte superior del contenido interno */
+  right: 60px;            /* separación de 60px respecto al borde derecho */
+  width: 360px;
   background: #fff;
-  border: 5px solid #000;
+  border: 5px solid #000; /* borde negro en desktop */
   padding: 8px 8px 6px;
-  z-index: 20;                /* por encima del punteado */
+  z-index: 5;             /* sobre el punteado, pero sin tapar el texto */
 }
 .imagen-wrap img {
   width: 100%;
@@ -102,28 +110,48 @@ body {
   text-align: center;
   font-size: 13px;
   margin: 12px 0 6px;
-  color: #6a1b9a;             /* morado */
+  color: #3b2a91;         /* morado */
 }
 
-/* Menú horizontal */
+/* Menú con línea roja de 5px a la izquierda de cada opción */
 .menu {
   text-align: center;
   font-size: 14px;
-  color: #6a1b9a;             /* morado */
-  margin: 0 0 14px;
+  color: #3b2a91;         /* morado */
+  margin: 0 0 20px;
 }
 .menu a {
-  color: #6a1b9a;
+  color: #3b2a91;
   text-decoration: none;
-  font-weight: normal;        /* sin negrita */
+  font-weight: normal;
+  border-left: 5px solid #ff0000; /* línea roja 5px a la izquierda */
+  padding-left: 10px;
+  margin: 0 6px;
 }
-.menu a:hover { text-decoration: underline; }
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff0000; /* subrayado rojo al hover */
+}
 
-/* Barra inferior */
-.barra-footer {
-  width: 100%;
-  height: 12px;
-  background: #a58bd0;        /* tono violeta azulado */
-  box-shadow: inset 0 6px 0 rgba(40,50,120,0.25); /* sombra interna */
-  border-top: 1px solid #5a4a93;                  /* línea superior suave */
+/* Pie con línea superior de 5px negra */
+.pie {
+  border-top: 5px solid #000;
+  height: 12px;           /* barra visual como en la maqueta */
+  background: #a58bd0;    /* violeta azulado */
+  box-shadow: inset 0 6px 0 rgba(40,50,120,0.25);
+}
+
+/* Responsive: <= 500px */
+@media all and (max-width: 500px) {
+  .imagen-wrap {
+    border-color: #ff0000; /* borde rojo */
+    width: 90vw;           /* ocupa el 90% del total */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%); /* centrada en la ventana */
+    top: 8px;
+  }
+  .parrafo {
+    width: 90vw;
+  }
 }
