@@ -22,13 +22,6 @@ html, body {
   margin: 0 auto;
 }
 
-/* Caja doble con separación interna para los 10px de respiro */
-.caja-doble {
-  border: 6px solid #000;
-  border-radius: 18px;
-  padding: 10px;          /* 10px de separación respecto a la caja asignada */
-  position: relative;
-}
 .panel-interior {
   position: relative;
   padding: 8px;           /* punteado cercano al borde */
