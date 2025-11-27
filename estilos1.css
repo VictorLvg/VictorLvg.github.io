@@ -1,8 +1,14 @@
 /* RESET */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: #fff; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff; /* fondo blanco como en la imagen */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #003366;
+}
 
-/* Título */
+/* TÍTULO CENTRADO CON LÍNEA NEGRA */
 .titulo {
   text-align: center;
   font-size: 32px;
@@ -11,15 +17,19 @@ html, body { margin: 0; padding: 0; background: #fff; }
   border-bottom: 5px solid black;
 }
 
-/* Menú */
+/* MENÚ CON SEPARADORES REALES Y BARRA ROJA IZQUIERDA */
 .menu ul {
   display: flex;
   justify-content: center;
-  gap: 10px;
   list-style: none;
   background: #fffdbd;
   padding: 10px;
   margin: 0;
+  gap: 10px;
+}
+.menu ul li {
+  display: flex;
+  align-items: center;
 }
 .menu ul li a {
   border-left: 5px solid red;
@@ -33,7 +43,7 @@ html, body { margin: 0; padding: 0; background: #fff; }
   text-decoration-color: red;
 }
 
-/* Línea azul */
+/* LÍNEA AZUL BAJO EL MENÚ */
 .linea-azul {
   height: 6px;
   width: 85%;
@@ -41,7 +51,7 @@ html, body { margin: 0; padding: 0; background: #fff; }
   border-top: 4px solid #003366;
 }
 
-/* Créditos */
+/* CRÉDITOS CENTRADOS */
 .creditos {
   text-align: center;
   font-size: 14px;
@@ -49,7 +59,7 @@ html, body { margin: 0; padding: 0; background: #fff; }
   margin: 6px 0 18px;
 }
 
-/* Imagen flotante */
+/* IMAGEN FLOTANTE QUE ATRAVIESA LA CAJA */
 .imagen-wrap {
   position: absolute;
   top: 160px;
@@ -65,7 +75,7 @@ html, body { margin: 0; padding: 0; background: #fff; }
   display: block;
 }
 
-/* Flechas */
+/* FLECHAS LATERALES */
 .flechas-izq, .flechas-der {
   position: absolute;
   top: 170px;
@@ -76,7 +86,7 @@ html, body { margin: 0; padding: 0; background: #fff; }
 .flechas-izq { left: -56px; }
 .flechas-der { right: -56px; transform: scaleX(-1); }
 
-/* Caja doble */
+/* CAJA DOBLE CON BORDE GRUESO + PUNTEADO INTERIOR */
 .caja-doble {
   margin-top: 20px;
   padding: 12px;
@@ -98,7 +108,7 @@ html, body { margin: 0; padding: 0; background: #fff; }
   pointer-events: none;
 }
 
-/* Párrafos */
+/* PÁRRAFOS CON SOMBRA, SANGRÍA Y FONDOS DIFERENCIADOS */
 .parrafo {
   width: 90%;
   margin: 10px auto;
@@ -114,17 +124,22 @@ html, body { margin: 0; padding: 0; background: #fff; }
 .parrafo1 {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 3px, transparent 3px, transparent 6px);
+  background-image: repeating-linear-gradient(135deg,
+    rgba(0,0,0,0.06) 0px,
+    rgba(0,0,0,0.06) 3px,
+    transparent 3px,
+    transparent 6px);
 }
-.parrafo2, .parrafo3 {
-  background-color: #e9e0f0;
+.parrafo2,
+.parrafo3 {
+  background-color: #e9e0f0; /* fondo lila solo en párrafos 2 y 3 */
 }
 .parrafo3 {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-/* Barra y pie */
+/* BARRA INFERIOR Y PIE DE PÁGINA */
 .barra-footer {
   width: 100%;
   height: 12px;
@@ -138,33 +153,4 @@ html, body { margin: 0; padding: 0; background: #fff; }
   text-align: center;
   padding: 12px 0;
   color: #2b3862;
-}
-
-/* Responsive */
-@media all and (max-width: 500px) {
-  .imagen-wrap {
-    position: static;
-    width: 90%;            /* ocupa el 90% del ancho */
-    max-width: 420px;      /* no sobrepasa su tamaño original */
-    margin: 10px auto 16px;
-    padding: 8px;
-    border: 3px solid red; /* borde rojo en móvil */
-    float: none;           /* se centra, no flota a la derecha */
-    z-index: auto;
-  }
-
-  .flechas-izq,
-  .flechas-der,
-  .flecha-superior {
-    display: none;         /* oculta flechas en móvil */
-  }
-
-  .parrafo {
-    width: 90%;            /* párrafos al 90% también */
-    max-width: none;
-  }
-
-  .stage {
-    padding-bottom: 20px;  /* respiración extra */
-  }
 }
