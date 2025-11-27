@@ -1,25 +1,54 @@
-/* Centrar título con línea inferior */
-h1 {
-  text-align: center;
-  border-bottom: 5px solid black;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 2em;
+/* Fondo general */
+body {
+  background-color: #dcd2ea;
+  font-family: Arial, sans-serif;
+  color: #003366;
+  margin: 0;
 }
 
-/* Menú horizontal con separadores y línea roja a la izquierda */
+/* Flecha superior */
+.top-arrow {
+  background-image: url('flecha_arriba.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90px;
+  margin-top: 10px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  border-bottom: 5px solid black;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+}
+
+/* Caja de la imagen */
+.imagen-box {
+  float: right;
+  width: 420px;
+  border: 4px solid black;
+  background-color: white;
+  padding: 10px;
+  margin: 10px 40px 30px 20px;
+}
+
+.imagen-box img {
+  width: 100%;
+  display: block;
+}
+
+/* Menú */
 nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   gap: 20px;
   background-color: #FFFFCC;
-}
-
-nav li {
-  display: inline;
+  border-bottom: 5px solid #003366;
 }
 
 nav li a {
@@ -35,67 +64,98 @@ nav li a:hover {
   text-decoration-color: red;
 }
 
-/* Imagen alineada a la derecha con margen */
-img {
-  float: right;
-  margin-right: 60px;
-  max-width: 300px;
+/* Créditos bajo el menú */
+.creditos {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
-/* Contenedor de párrafos con borde punteado */
+/* Caja general de párrafos con doble borde */
 .container-parrafos {
-  width: 90%;
+  width: 85%;
   margin: auto;
-  border: 2px dashed #003366;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 25px;
+  background-color: white;
+  border: 5px solid #333;
+  border-radius: 20px;
+  position: relative;
 }
 
-/* Párrafos con sombra, sangría y separación */
+/* Borde interior discontinuo */
+.container-parrafos::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 3px dashed #333;
+  border-radius: 15px;
+}
+
+/* Flechas laterales */
+.container-parrafos::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -70px;
+  width: 60px;
+  height: 300px;
+  background-image: url('flecha_izq.png');
+  background-repeat: no-repeat;
+}
+
+.container-parrafos::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -70px;
+  width: 60px;
+  height: 300px;
+  background-image: url('flecha_der.png');
+  background-repeat: no-repeat;
+}
+
+/* Párrafos */
 .container-parrafos p {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 18px;
+  margin: 15px 0;
   text-indent: 40px;
-  margin-bottom: 10px;
-  padding: 15px;
-  background-color: #FFFFFF;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
-/* Primer párrafo con esquinas superiores y fondo repetido */
+/* Párrafo superior con esquinas */
 .parrafo1 {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   background-image: url('fondo.png');
-  background-repeat: repeat;
 }
 
-/* Último párrafo con esquinas inferiores */
+/* Párrafo inferior con esquinas */
 .parrafo3 {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-/* Pie de página con línea superior */
+/* Footer */
 footer {
-  border-top: 5px solid black;
-  background-color: #FFCCCC;
-  padding: 10px;
   margin-top: 40px;
+  padding: 10px;
   text-align: center;
+  background-color: #e6b8d9;
+  border-top: 5px solid #003366;
 }
 
-/* Fondo blanco y colores del esquema */
-body {
-  background-color: #FFFFFF;
-  color: #003366;
-  font-family: Arial, sans-serif;
-}
-
-/* Responsive para pantallas pequeñas */
-@media all and (max-width: 500px) {
-  img {
-    border: 3px solid red;
-    width: 90%;
-    display: block;
-    margin: 0 auto;
+/* Ajustes responsive */
+@media all and (max-width: 700px) {
+  .imagen-box {
     float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
   }
+
+  .container-parrafos::after,
+  .container-parrafos::before {
+    display: none;
+  }
+}
